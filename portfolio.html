@@ -27,10 +27,15 @@
     <header class="header">
       <!-- Header navigation panel -->
       <div class="header__container container">
+        <a class="logo logo__header" href="./index.html"
+          ><span class="logo__part">Web</span>Studio</a
+        >
+        <button class="header__btn-menu js-open-menu" type="button">
+          <svg class="" width="24" height="16">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav class="nav">
-          <a class="logo logo__header" href="./index.html"
-            ><span class="logo__part">Web</span>Studio</a
-          >
           <ul class="nav__list list">
             <li class="nav__item">
               <a class="nav__link link" href="./index.html">Студія</a>
@@ -495,5 +500,99 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button
+        class="menu-toggle js-close-menu"
+        aria-label="Кнопка для закриття меню"
+      >
+        <svg class="menu-toggle__icon" width="19" height="19">
+          <use href="./images/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li>
+          <a class="mobile-menu__link link" href="./index.html" class="link"
+            >Студія</a
+          >
+        </li>
+        <li>
+          <a
+            class="mobile-menu__link mobile-menu__link--current link"
+            href="./portfolio.html"
+            class="link"
+            >Портфоліо</a
+          >
+        </li>
+        <li>
+          <a class="mobile-menu__link link" href="" class="link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="contacts-mobile">
+        <li>
+          <a
+            class="contacts-mobile__link contacts-mobile__link--accent"
+            href="tel:+380961111111"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li>
+          <a class="contacts-mobile__link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+        <ul class="socials-mobile">
+          <li>
+            <a
+              class="socials-mobile__link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              class="socials-mobile__link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              class="socials-mobile__link"
+              href="https://fb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              class="socials-mobile__link"
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <!--
+      |============================
+      | JS Scripts
+      |============================
+    -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

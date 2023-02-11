@@ -6,32 +6,27 @@
     display: flex;
 }
 
-.logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
 
-    color: var(--logo-header-color);
-    text-decoration: none;
-
-}
 
 .logo__header {
-    display: inline-block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-right: 93px;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .logo__part {
     color: var(--accent-color);
 }
+// Menu button mobile
+.menu-button{
+margin-left: auto;
 
+    background-color: transparent;
+}
 /* Site nav */
 
 .nav {
-    display: flex;
+    display: none;
     &__list {
             display: flex;
             align-items: center;
@@ -71,7 +66,7 @@
 /* Contacts header */
 
 .contacts {
-    display: flex;
+    display: none;
     margin-left: auto;
     align-items: center;
     gap: 30px;

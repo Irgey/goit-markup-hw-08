@@ -1,17 +1,14 @@
 /* Features section */
 .features {
-    padding-top: 94px;
+
 }
 
 .features__list {
-    display: flex;
-    gap: 30px;
+
 }
 
 .features__item {
-    width: 270px;
-    display: flex;
-    flex-direction: column;
+margin-bottom: 30px;
 }
 
 .features__icon-wrapper {
@@ -19,7 +16,6 @@
     justify-content: center;
     align-items: center;
 
-    width: 270px;
     height: 120px;
     margin-bottom: 30px;
 
@@ -29,7 +25,8 @@
 
 .features__title {
     color: var(--primary-text-color);
-    font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: calc(16/14);
+
+    text-align: center;
 }

@@ -451,7 +451,6 @@ p {
 }
 
 .container {
-  min-width: 320px;
   max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
@@ -1355,6 +1354,11 @@ p {
   transition: opacity 500ms ease var(--transition-slow), transform 1000ms ease var(--transition-slow);
   transition: opacity 500ms ease var(--transition-slow), transform 1000ms ease var(--transition-slow), -webkit-transform 1000ms ease var(--transition-slow);
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
 
 /* Modal form */
 .modal-title {
@@ -1364,6 +1368,11 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .modal-label {
@@ -1462,6 +1471,9 @@ button .modal-label > .modal-comment-textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px;
   margin-top: 20px;
   padding: 0 12px;
@@ -1478,10 +1490,25 @@ button .modal-label > .modal-comment-textarea::placeholder {
   clip: rect(0 0 0 0);
 }
 
+.checkbox__text {
+  font-size: 12px;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__text {
+    font-size: 14px;
+  }
+}
+
 .form__agreement-link {
   font-size: 12px;
   line-height: 1.1666666667;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .form__agreement-link {
+    font-size: 14px;
+  }
 }
 
 .checkbox-custom {
@@ -1506,11 +1533,6 @@ button .modal-label > .modal-comment-textarea::placeholder {
   fill: transparent;
   -webkit-transition: fill var(--transition-fast) var(--transition-function);
   transition: fill var(--transition-fast) var(--transition-function);
-}
-
-.checkbox__text {
-  font-size: 12px;
-  line-height: 1.1666666667;
 }
 
 .modal-checkbox:checked + .checkbox-custom {

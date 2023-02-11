@@ -1,36 +1,43 @@
 /* Clients section */
 .clients__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--main-icon-color);
-    border-radius: 4px;
-    width: 210px;
-    height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--main-icon-color);
+  border-radius: 4px;
+  width: 210px;
+  height: 92px;
 
-    outline: transparent;
+  outline: transparent;
 
-    transition: border-color var(--transition-fast) var(--transition-function);
-    &:hover,
-    &:focus {
-            border-color: var(--accent-color);
-            & .clients__icon,
-            & .clients__icon {
-                    fill: var(--accent-color);
-                }
-        }
+  transition: border-color var(--transition-fast) var(--transition-function);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    & .clients__icon,
+    & .clients__icon {
+      fill: var(--accent-color);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 224px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 }
-
 
 .clients__icon {
-    fill: var(--main-icon-color);
-    transition: fill var(--transition-fast) var(--transition-function);
+  fill: var(--main-icon-color);
+  transition: fill var(--transition-fast) var(--transition-function);
 }
-

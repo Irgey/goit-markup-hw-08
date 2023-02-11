@@ -167,7 +167,7 @@ p {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
 .nav__link--current {
@@ -240,7 +240,7 @@ p {
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
@@ -632,7 +632,7 @@ p {
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   transition: background-color var(--transition-fast) var(--transition-function),
     box-shadow var(--transition-fast) var(--transition-function);

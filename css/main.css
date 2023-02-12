@@ -322,6 +322,12 @@ p {
   margin: 0;
 }
 
+input,
+textarea {
+  width: 100%;
+  display: block;
+}
+
 .page {
   margin: 0;
   background-color: var(--primary-white-color);
@@ -452,6 +458,7 @@ p {
 
 .container {
   max-width: 480px;
+  min-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -629,8 +636,8 @@ p {
   padding-bottom: 118px;
   margin: 0 auto;
   background-color: var(--secondary-bg-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-page-mobile/hero/header.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page-mobile/hero/header.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-page-mobile/hero/hero_background.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page-mobile/hero/hero_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -638,8 +645,8 @@ p {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-page-tablet/hero/hero-img.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page-tablet/hero/hero-img.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-page-tablet/hero/hero_background.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page-tablet/hero/hero_background.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -727,13 +734,13 @@ p {
 }
 @media screen and (min-width: 768px) {
   .features__item {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }
 
@@ -829,7 +836,13 @@ p {
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
     margin-bottom: 0;
   }
 }
@@ -870,6 +883,20 @@ p {
   }
 }
 
+.clients__item {
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
+}
+
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -882,7 +909,6 @@ p {
           align-items: center;
   border: 1px solid var(--main-icon-color);
   border-radius: 4px;
-  width: 210px;
   height: 92px;
   outline: transparent;
   -webkit-transition: border-color var(--transition-fast) var(--transition-function);
@@ -893,16 +919,6 @@ p {
 }
 .clients__link:hover .clients__icon, .clients__link:hover .clients__icon, .clients__link:focus .clients__icon, .clients__link:focus .clients__icon {
   fill: var(--accent-color);
-}
-@media screen and (min-width: 768px) {
-  .clients__link {
-    width: 224px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .clients__link {
-    width: 170px;
-  }
 }
 
 .clients__icon {
@@ -1032,6 +1048,7 @@ p {
 
 /* Social company wrapper */
 .socials-footer-wrapper {
+  max-width: 450px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
@@ -1050,6 +1067,11 @@ p {
 
 /* Subscribe section */
 /* Subscribe container */
+.subscribe-news-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
 .subscribe-form {
   margin: 0 auto;
 }
@@ -1064,7 +1086,6 @@ p {
 
 /* Input field */
 .subscribe-form__field {
-  width: 100%;
   height: 50px;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.6);

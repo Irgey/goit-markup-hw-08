@@ -8,14 +8,23 @@
     flex-wrap: nowrap;
   }
 }
+.clients__item {
+  width: calc((100% - 30px) / 2);
 
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 5 * 30px) / 6);
+  }
+}
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--main-icon-color);
   border-radius: 4px;
-  width: 210px;
+
   height: 92px;
 
   outline: transparent;
@@ -29,14 +38,7 @@
       fill: var(--accent-color);
     }
   }
-  @media screen and (min-width: 768px) {
-    width: 224px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 170px;
-  }
 }
-
 .clients__icon {
   fill: var(--main-icon-color);
   transition: fill var(--transition-fast) var(--transition-function);

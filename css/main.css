@@ -786,7 +786,7 @@ textarea {
 
 .services__item {
   position: relative;
-  width: 370px;
+  width: calc((100% - 60px) / 3);
 }
 
 .services__title {
@@ -1327,12 +1327,21 @@ textarea {
   gap: 20px;
 }
 .socials-mobile__link {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
+}
+.socials-mobile__link::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 1px;
+  right: -10px;
+  background-color: var(--secondary-text-color);
 }
 
 .header__btn-menu {

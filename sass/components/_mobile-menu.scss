@@ -115,6 +115,7 @@
   flex-wrap: wrap;
   gap: 20px;
   &__link {
+    position: relative;
     font-weight: 500;
     font-size: 18px;
     line-height: calc(22 / 18);
@@ -122,6 +123,15 @@
 
     color: var(--accent-color);
     text-decoration: none;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 1px;
+      right: -10px;
+
+      background-color: var(--secondary-text-color);
+    }
   }
 }
 

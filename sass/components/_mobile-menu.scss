@@ -113,25 +113,22 @@
 .socials-mobile {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+
   &__link {
     position: relative;
     font-weight: 500;
     font-size: 18px;
     line-height: calc(22 / 18);
     letter-spacing: 0.02em;
-
     color: var(--accent-color);
     text-decoration: none;
-    &::after {
-      position: absolute;
-      content: '';
-      height: 100%;
-      width: 1px;
-      right: -10px;
-
-      background-color: var(--secondary-text-color);
-    }
+  }
+}
+.socials-mobile__item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 0 5px;
+  &:last-child {
+    border: none;
   }
 }
 

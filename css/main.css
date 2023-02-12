@@ -768,12 +768,9 @@ textarea {
 }
 
 /* Services section */
-.services {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .services {
-    display: block;
+    display: none;
   }
 }
 
@@ -1324,7 +1321,6 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
 }
 .socials-mobile__link {
   position: relative;
@@ -1335,13 +1331,13 @@ textarea {
   color: var(--accent-color);
   text-decoration: none;
 }
-.socials-mobile__link::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 1px;
-  right: -10px;
-  background-color: var(--secondary-text-color);
+
+.socials-mobile__item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 0 5px;
+}
+.socials-mobile__item:last-child {
+  border: none;
 }
 
 .header__btn-menu {

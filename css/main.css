@@ -771,6 +771,11 @@ textarea {
 .services {
   display: none;
 }
+@media screen and (min-width: 1200px) {
+  .services {
+    display: block;
+  }
+}
 
 .services__list {
   display: -webkit-box;
@@ -783,7 +788,8 @@ textarea {
   position: relative;
   width: 370px;
 }
-.services__item__title {
+
+.services__title {
   display: block;
   position: absolute;
   width: 100%;

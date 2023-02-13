@@ -146,27 +146,62 @@
           <ul class="services__list">
             <li class="services__item">
               <img
+                class="services__img"
+                srcset="
+                  ./images/desktop/services/img.jpg    1x,
+                  ./images/desktop/services/img@2x.jpg 2x
+                "
+                src="./images/desktop/services/img.jpg"
+                alt="Десктопні додатки"
+                width="370"
+                loading="lazy"
+              />
+              <!-- <img
                 src="images/main-page/index_img1.jpg"
                 alt="кодування"
                 width="370"
-              />
+              /> -->
 
               <h3 class="services__title">Десктопні додатки</h3>
             </li>
             <li class="services__item">
               <img
+                class="services__img"
+                srcset="
+                  ./images/desktop/services/img-1.jpg    1x,
+                  ./images/desktop/services/img@2x-1.jpg 2x
+                "
+                src="./images/desktop/services/img-1.jpg"
+                alt="Мобільні додатки"
+                width="370"
+                loading="lazy"
+              />
+
+              <!-- <img
                 src="images/main-page/index_img2.jpg"
                 alt="адаптивна верстка"
                 width="370"
-              />
+              /> -->
               <h3 class="services__title">Мобільні додатки</h3>
             </li>
             <li class="services__item">
               <img
+                class="services__img"
+                srcset="
+                  ./images/desktop/services/img-2.jpg    1x,
+                  ./images/desktop/services/img@2x-2.jpg 2x
+                "
+                src="./images/desktop/services/img-1.jpg"
+                alt="Дизайнерські рішення"
+                width="370"
+                loading="lazy"
+              />
+
+              <!-- <img
                 src="images/main-page/index_img3.jpg"
                 alt="добірка кольорової гами"
                 width="370"
-              />
+              /> -->
               <h3 class="services__title">Дизайнерські рішення</h3>
             </li>
           </ul>
@@ -178,11 +213,41 @@
           <h2 class="team__title title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/main-page-mobile/team/img-mob1.jpg"
-                alt="Ігор Дем'яненко,Product Designer"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/team/img.jpg    1x,
+                    ./images/desktop/team/img@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/team/img.jpg    1x,
+                    ./images/tablet/team/img@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/team/img.jpg    1x,
+                    ./images/mobile/team/img@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/mobile/team/img.jpg"
+                  alt="Ігор Дем'яненко,Product Designer"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__content-wrapper">
                 <h3 class="team__min-title">Ігор Дем'яненко</h3>
                 <p class="team__text text">Product Designer</p>
@@ -243,11 +308,42 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/main-page-mobile/team/img-mob2.jpg"
-                alt="Ольга Рєпіна, Frontend Developer"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/team/img-1.jpg    1x,
+                    ./images/desktop/team/img@2x-1.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/team/img-1.jpg    1x,
+                    ./images/tablet/team/img@2x-1.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/team/img-1.jpg    1x,
+                    ./images/mobile/team/img@2x-1.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/mobile/team/img-1.jpg"
+                  alt="Ольга Рєпіна, Frontend Developer"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__content-wrapper">
                 <h3 class="team__min-title">Ольга Рєпіна</h3>
                 <p class="team__text text">Frontend Developer</p>
@@ -308,11 +404,42 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/main-page-mobile/team/img-mob3.jpg"
-                alt="Микола Тарасов, Marketing"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/team/img-2.jpg    1x,
+                    ./images/desktop/team/img@2x-2.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/team/img-2.jpg    1x,
+                    ./images/tablet/team/img@2x-2.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/team/img-2.jpg    1x,
+                    ./images/mobile/team/img@2x-2.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/mobile/team/img-2.jpg"
+                  alt="Микола Тарасов, Marketing"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__content-wrapper">
                 <h3 class="team__min-title">Микола Тарасов</h3>
                 <p class="team__text text">Marketing</p>
@@ -373,11 +500,42 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="item-img"
-                src="images/main-page-mobile/team/img-mob4.jpg"
-                alt="Михайло Єрмаков, UI Designer"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/desktop/team/img-3.jpg    1x,
+                    ./images/desktop/team/img@2x-3.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/team/img-3.jpg    1x,
+                    ./images/tablet/team/img@2x-3.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/team/img-3.jpg    1x,
+                    ./images/mobile/team/img@2x-3.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/mobile/team/img-3.jpg"
+                  alt="Михайло Єрмаков, UI Designer"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__content-wrapper">
                 <h3 class="team__min-title">Михайло Єрмаков</h3>
                 <p class="team__text text">UI Designer</p>

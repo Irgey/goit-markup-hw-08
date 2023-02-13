@@ -1,35 +1,69 @@
 /* Hero section (hero button in Buttons section_ */
 .hero {
-  max-width: 480px;
   padding-top: 118px;
   padding-bottom: 118px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
   margin: 0 auto;
   background-color: var(--secondary-bg-color);
+  // Mobile screen
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/main-page-mobile/hero/hero_background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+    url(../images/mobile/hero/header.jpg);
+  // retina mobile screen
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: linear-gradient(
+        to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/main-page-tablet/hero/hero_background.jpg);
+      url(../images/mobile/hero/header@2x.jpg);
   }
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
+  // Tablet screen
+  @media screen and (min-width: 481px) {
     background-image: linear-gradient(
+        to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/main-page/hero_background.jpg);
-    padding-top: 200px;
-    padding-bottom: 200px;
+      url(../images/tablet/hero/header.jpg);
+    // retina tablet screen
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet/hero/header@2x.jpg);
+    }
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/hero/header.jpg);
+    // retina desktop screen
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/desktop/hero/header@2x.jpg);
+    }
   }
 }
 

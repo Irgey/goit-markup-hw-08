@@ -337,6 +337,9 @@ textarea {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.page.scroll-lock {
+  overflow: hidden;
+}
 
 .link {
   text-decoration: none;
@@ -1299,6 +1302,13 @@ textarea {
 
 .product__item {
   background: var(--hero-title-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .product__item {
@@ -1319,6 +1329,20 @@ textarea {
   transition: box-shadow var(--transition-fast) var(--transition-function);
   transition: box-shadow var(--transition-fast) var(--transition-function), -webkit-box-shadow var(--transition-fast) var(--transition-function);
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .product__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 
 .product__link:hover,
 .product__link:focus {
@@ -1333,6 +1357,9 @@ textarea {
   border-left: 1px solid var(--item-border-color);
   border-right: 1px solid var(--item-border-color);
   border-bottom: 1px solid var(--item-border-color);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .categories__button {
@@ -1578,6 +1605,11 @@ textarea {
   transition: opacity 500ms ease var(--transition-slow), -webkit-transform 1000ms ease var(--transition-slow);
   transition: opacity 500ms ease var(--transition-slow), transform 1000ms ease var(--transition-slow);
   transition: opacity 500ms ease var(--transition-slow), transform 1000ms ease var(--transition-slow), -webkit-transform 1000ms ease var(--transition-slow);
+}
+@media screen and (max-height: 629px) {
+  .modal {
+    top: 85%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1831,7 +1863,7 @@ button .modal-label > .modal-comment-textarea::placeholder {
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   background-color: var(--backdrop-color);
   -webkit-transition: opacity var(--transition-slow), visibility var(--transition-slow);
   transition: opacity var(--transition-slow), visibility var(--transition-slow);

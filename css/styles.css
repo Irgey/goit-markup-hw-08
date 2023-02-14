@@ -16,7 +16,7 @@
   /* Icon colors */
   --main-icon-color: #afb1b8;
   --accent-icon-color: #ffffff;
-  /* Othhero__ers */
+  /* Others */
   --transition-fast: 250ms;
   --transition-slow: 500ms;
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -532,8 +532,8 @@ p {
   | Portfolio page
   |============================
 */
-/* Projects section (portfolio.html) */
-.categories-buttons {
+/* Products section (portfolio.html) */
+.categories {
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -561,17 +561,17 @@ p {
   transform: translateY(100%);
   transition: transform var(--transition-fast) var(--transition-function);
 }
-.projects-link:hover .product-box-text-hidden,
-.projects-link:focus .product-box-text-hidden {
+.product__link:hover .product-box-text-hidden,
+.product__link:focus .product-box-text-hidden {
   transform: translateY(0);
 }
 
-.projects.list {
+.product__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.projects .title {
+.product__title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
   font-weight: 700;
@@ -580,29 +580,31 @@ p {
   letter-spacing: 0.06em;
   text-align: left;
 }
-.projects .text {
+.product__category {
+  color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-.projects .item {
+.product__item {
   width: 370px;
 
   background: var(--hero-title-color);
 }
-.projects .link {
+.product__link {
+  text-decoration: none;
   display: inline-block;
   transition: box-shadow var(--transition-fast) var(--transition-function);
 }
-.projects .link:hover,
-.projects .link:focus {
+.product__link:hover,
+.product__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
   outline: transparent;
 }
 
-.projects .wrapper {
+.product__wrapper {
   padding: 20px 24px;
   border-left: 1px solid var(--item-border-color);
   border-right: 1px solid var(--item-border-color);
@@ -643,7 +645,7 @@ p {
   background-color: var(--button-active);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.button.secondary {
+.categories__button {
   padding: 6px 22px;
   color: var(--primary-text-color);
   background-color: var(--third-bg-color);

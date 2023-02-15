@@ -18,7 +18,7 @@
     top: 85%;
   }
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    max-width: 528px;
   }
 }
 
@@ -40,31 +40,31 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
-.modal-label:not(:last-child) {
-  margin-bottom: 10px;
-}
+// .modal-label:not(:last-child) {
+//   margin-bottom: 10px;
+// }
 
 .modal-label > .input-field,
 .modal-label > .modal-comment-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color var(--transition-fast) var(--transition-function);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: 1px solid transparent;
+  }
 }
 
-.modal-label > input {
+.modal-label > .input-field {
   height: 40px;
   padding-left: 35px;
   padding-right: 5px;
-}
-
-.modal-label > input:hover,
-.modal-label > input:focus,
-.modal-label > .modal-comment-textarea:hover,
-.modal-label > .modal-comment-textarea:focus {
-  border-color: var(--accent-color);
-  outline: 1px solid transparent;
 }
 
 .modal-label > .input-field:hover ~ .modal-icon,

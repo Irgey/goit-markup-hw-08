@@ -82,11 +82,12 @@
 }
 
 .mobile-menu__link {
+  @extend %link;
+
   display: block;
   font-size: 40px;
   padding: 10px;
   color: var(--primary-text-color);
-  text-decoration: none;
 }
 .mobile-menu__link--current {
   color: var(--accent-color);

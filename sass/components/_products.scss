@@ -35,10 +35,10 @@
 
   transform: translateY(100%);
   transition: transform var(--transition-fast) var(--transition-function);
-}
-.product__link:hover .product-box-text-hidden,
-.product__link:focus .product-box-text-hidden {
-  transform: translateY(0);
+  .product__link:hover &,
+  .product__link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .product__list {
@@ -81,15 +81,14 @@
     flex-direction: column;
     flex-grow: 1;
   }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    outline: transparent;
+  }
 }
-.product__link:hover,
-.product__link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 4px;
-  outline: transparent;
-}
-
 .product__wrapper {
   padding: 20px 24px;
   border-left: 1px solid var(--item-border-color);
@@ -116,19 +115,16 @@
     box-shadow var(--transition-fast) var(--transition-function);
   border-color: transparent;
   border-radius: 4px;
-}
-
-.button:hover,
-.button:focus,
-.button.current {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button:active {
-  background-color: var(--button-active);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus,
+  &.current {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  &:active {
+    background-color: var(--button-active);
+  }
 }

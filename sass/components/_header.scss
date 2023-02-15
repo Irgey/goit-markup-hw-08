@@ -40,6 +40,8 @@
   }
 }
 .nav__link {
+  @extend %link;
+
   display: flex;
   position: relative;
 
@@ -47,10 +49,8 @@
   padding-bottom: 31px;
 
   color: var(--primary-text-color);
-  font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
 }
 
 .nav__link--current {
@@ -93,6 +93,8 @@
 }
 
 .contacts__link {
+  @extend %link;
+
   display: flex;
   align-items: center;
   gap: 10px;

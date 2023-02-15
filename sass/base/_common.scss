@@ -11,22 +11,6 @@
   }
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  transition: color var(--transition-fast) var(--transition-function);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -91,6 +75,10 @@
   &--theme-dark {
     fill: var(--accent-icon-color);
   }
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: var(--accent-icon-color);
+  }
 }
 
 .social__link {
@@ -108,10 +96,7 @@
   &:focus {
     background-color: var(--accent-color);
   }
-  &:hover .social__icon,
-  &:focus .social__icon {
-    fill: var(--accent-icon-color);
-  }
+
   &--themedark {
     background-color: rgba(255, 255, 255, 0.1);
   }
